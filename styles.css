@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, input, textarea {
+    font-family: 'Raleway', sans-serif;
+    background-color: #fff;
+}
+
+header h1 {
+    font-weight: normal;
+}
+
+header {
+    padding: 16px 0;
+    background-color: #b81414;
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 20px;
+}
+
+header nav li a{
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container, 
+section .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logos img{
+    height: 35px;
+
+}
+
+.logos {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
+}
+
+section .container {
+    align-items: flex-start;
+}
+
+section {
+    padding: 24px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: normal;
+    font-size: 37px;
+    color: #b81414;
+}
+
+section  h3 {
+    color: #b81414;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: normal;
+    margin-bottom: 13px;
+    font-size: 25px;
+}
+
+section p{
+    margin-bottom: 15px;
+    margin-left: px;
+
+}
+
+
+.logo {
+    margin-right: 32px;
+}
+
+.redes {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+
+
+.redes img{
+    height: 24px;
+    margin-top: 10px;
+}
+
+#contato .container{
+    display: block;
+}
+
+.metodos_contato {
+    display: flex;
+    justify-content: space-between;
+}
+
+form input,
+form textarea{
+    display: block;
+    width: 320px;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #ededed;
+    border: none;
+    resize: none;
+    color: black;
+}
+
+input:focus, textarea:focus {
+    outline-color: #b81414;
+}
+
+form button {
+    margin-top: 15px;
+    background-color: #b81414;
+    border: none;
+    color: #fff;
+    width: 50px;
+    height: 30px;
+    font-size: 15px;
+    font-family: 'Bebas Neue', sans-serif;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #ededed;
+    color: #b81414;
+}
+
+
+footer {
+    background-color: #b81414;
+    color: #fff;
+    padding: 16px 0;
+    text-align: center;
+
+}
