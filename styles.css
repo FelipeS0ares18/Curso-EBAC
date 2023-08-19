@@ -15,7 +15,7 @@ body {
     padding: 20px;
 }
 
-p {
+.sucesso {
     background-color: #0bb962;
     opacity: 0.6;
     margin-top: 10px;
@@ -27,7 +27,7 @@ p {
     display: none;
 }
 
-.nome_invalido {
+.erro {
     
         background-color: #b90b0b;
         opacity: 0.6;
@@ -56,16 +56,6 @@ input {
     border: none;
 }
 
-textarea {
-    font-family: sans-serif;
-    padding: 10px;
-    resize: none;
-    margin-top: 15px;
-    width: 600px;
-    box-shadow: 0 0 1rem rgb(0 0 0/ 0.2);
-    border: none;
-}
-
 button {
     display: block;
     margin-top: 10px;
@@ -78,7 +68,3 @@ button {
     border: none;
 }
 
-input.nome_invalido {
-    color: red;
-    outline-color: red;
-}

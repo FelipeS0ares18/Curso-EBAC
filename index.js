@@ -1,50 +1,28 @@
-const form = document.getElementById('form_deposito')
-const nome_beneficiario = document.getElementById('nome_beneficiario')
-let validacao = false;
+const form = document.getElementById('form_numero');
 
-
-function validaNome (nomeCompleto) {
-    const nomeComoArray = nomeCompleto.split(' ')
-    return nomeComoArray.length >=2;
+function validaNumero(numeroA, numeroB) {
+    return numeroB > numeroA;
 }
 
-form.addEventListener ('submit', function (e) {
-
+form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const numeroConta = document.getElementById('conta')
-    const valor = document.getElementById('valor')
-    const descricao = document.getElementById('text')
-    const sucesso = `Deposito de: R$ <b>${valor.value}</b> na conta: <b>${numeroConta.value }</b> de: <b>${nome_beneficiario.value}</b> realizado! Descrição: ${descricao.value}`
+    const numeroA = parseFloat(document.getElementById('numeroA').value);
+    const numeroB = parseFloat(document.getElementById('numeroB').value);
 
-    validacao = validaNome(nome_beneficiario.value);
+    const validacao = validaNumero(numeroA, numeroB);
+    const sucessoMsg = document.querySelector('.sucesso');
+    const erroMsg = document.querySelector('.erro');
+
     if (validacao) {
-        const containerMensagem = document.querySelector('.mensagem_de_sucesso');
-        containerMensagem.innerHTML = sucesso;
-        containerMensagem.style.display = 'block';
-
-        nome_beneficiario.value = '';
-        numeroConta.value = '';
-        valor.value = '';
-        descricao.value = '';
-
-
-    }else {
-        nome_beneficiario.style.border = 'solid 1px red'
-        document.querySelector('.nome_invalido').style.display = 'block'
+        sucessoMsg.style.display = 'block';
+        setTimeout(function () {
+            sucessoMsg.style.display = 'none';
+        }, 2000); 
+    } else {
+        erroMsg.style.display = 'block';
+        setTimeout(function () {
+            erroMsg.style.display = 'none';
+        }, 2000); 
     }
-
-})
-
-nome_beneficiario.addEventListener('keyup', function(e) {
-    validacao = validaNome(e.target.value);
-
-    if (!validacao) {
-        nome_beneficiario.style.color = 'red'
-        nome_beneficiario.style.outlineColor = 'red'
-        document.querySelector('.nome_invalido').style.display = 'block'
-    }else {
-        nome_beneficiario.style = ''
-        document.querySelector('.nome_invalido').style.display = 'none'
-    }
-})
+});
