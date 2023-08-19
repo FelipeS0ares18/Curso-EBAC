@@ -1,29 +1,50 @@
-const form = document.getElementById('form_deposito');
+const form = document.getElementById('form_deposito')
+const nome_beneficiario = document.getElementById('nome_beneficiario')
+let validacao = false;
 
-function validaNome(nomeCompleto) {
-    const nomeArray = nomeCompleto.split(' ');
-    return nomeArray.length >= 2;
+
+function validaNome (nomeCompleto) {
+    const nomeComoArray = nomeCompleto.split(' ')
+    return nomeComoArray.length >=2;
 }
 
-form.addEventListener('submit', function(e) {
+form.addEventListener ('submit', function (e) {
+
     e.preventDefault();
 
-    const nomeBeneficiario = document.getElementById('nome_beneficiario');
-    const numeroConta = document.getElementById ('conta')
-    const valor = document.getElementById ('valor')
-    const sucesso = `Deposito de: R$ ${valor.value} na conta: ${numeroConta.value} de: ${nomeBeneficiario.value} realizado`;
+    const numeroConta = document.getElementById('conta')
+    const valor = document.getElementById('valor')
+    const descricao = document.getElementById('text')
+    const sucesso = `Deposito de: R$ <b>${valor.value}</b> na conta: <b>${numeroConta.value }</b> de: <b>${nome_beneficiario.value}</b> realizado! Descrição: ${descricao.value}`
 
-    let validacao = validaNome(nomeBeneficiario.value)
+    validacao = validaNome(nome_beneficiario.value);
     if (validacao) {
-        alert(sucesso);
+        const containerMensagem = document.querySelector('.mensagem_de_sucesso');
+        containerMensagem.innerHTML = sucesso;
+        containerMensagem.style.display = 'block';
 
-        nomeBeneficiario.value = '';
+        nome_beneficiario.value = '';
         numeroConta.value = '';
         valor.value = '';
+        descricao.value = '';
 
-    } else {
-        alert ('Nome Invalido')
+
+    }else {
+        nome_beneficiario.style.border = 'solid 1px red'
+        document.querySelector('.nome_invalido').style.display = 'block'
     }
+
 })
 
-console.log(form)
+nome_beneficiario.addEventListener('keyup', function(e) {
+    validacao = validaNome(e.target.value);
+
+    if (!validacao) {
+        nome_beneficiario.style.color = 'red'
+        nome_beneficiario.style.outlineColor = 'red'
+        document.querySelector('.nome_invalido').style.display = 'block'
+    }else {
+        nome_beneficiario.style = ''
+        document.querySelector('.nome_invalido').style.display = 'none'
+    }
+})

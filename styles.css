@@ -15,7 +15,31 @@ body {
     padding: 20px;
 }
 
+p {
+    background-color: #0bb962;
+    opacity: 0.6;
+    margin-top: 10px;
+    width: 600px;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0 0 1rem rgb(0 0 0/ 0.2);
+    display: none;
+}
 
+.nome_invalido {
+    
+        background-color: #b90b0b;
+        opacity: 0.6;
+        margin-top: 10px;
+        width: 600px;
+        padding: 10px;
+        color: #fff;
+        font-size: 16px;
+        box-shadow: 0 0 1rem rgb(0 0 0/ 0.2);
+        display: none;
+    
+}
 
 form {
     display: block;
@@ -52,4 +76,9 @@ button {
     font-size: 1.5rem;
     font-weight: bold;
     border: none;
+}
+
+input.nome_invalido {
+    color: red;
+    outline-color: red;
 }
