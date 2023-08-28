@@ -86,39 +86,3 @@ table td {
     border-bottom: 1px solid #ddd;
 }
 
-table td img {
-    height: 30px;
-    padding: 5px;
-    display: block;
-    margin: 0 auto;
-}
-
-.resultado {
-    padding: 8px;
-    margin-top: 5px;
-    font-weight: bold;
-    color: white;
-    background-color: #009432;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
-
-.aprovado {
-    padding: 8px;
-    margin-top: 5px;
-    font-weight: bold;
-    color: white;
-    background-color: #009432;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
-
-.reprovado {
-    padding: 8px;
-    margin-top: 5px;
-    font-weight: bold;
-    color: white;
-    background-color: red;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
