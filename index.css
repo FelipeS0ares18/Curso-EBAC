@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+:root {
+    --lilas: #b19cd9;
+    --rosa: pink;
+    --rosê: rosybrown;
+}
+
+header {
+    background-color: rosybrown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    color: #fff;
+    gap: 10px;
+    border-bottom: 16px solid pink;
+}
+
+
+form {
+    color: #fff;
+    background-color: var(--lilas);
+    padding: 24px 0;
+    text-align: center;
+}
+
+form h2 {
+    margin-bottom: 16px;
+}
+
+input {
+    padding: 8px;
+    border: none;
+    font-family: sans-serif;
+}
+
+button {
+    background-color: rebeccapurple;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+#botao_add {
+    background-color: #90ee90;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#botao_cancelar {
+    background-color: #ff6961;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--rosa);
+}
+
+
