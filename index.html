@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhotoHome</title>
+    <title>Gerenciador de tarefas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -11,47 +11,21 @@
 </head>
 <body>
     <header>
-        <h1>PhotoHome</h1> 
-        <button type="button">Nova imagem</button>
+        <h1>Gerenciador de tarefas</h1> 
+        <button type="button">Nova tarefa</button>
     </header>
     <form>
-        <h2>Inserir nova imagem</h2>
-        <input type="url" required placeholder="Insira o endereço da imagem" id="input_img"/>
+        <h2>Adicione uma nova tarefa</h2>
+        <input type="text" required placeholder="Insira a sua tarefa" id="input_tarefa"/>
         <button type="submit" id="botao_add">Adicionar</button>
         <button type="reset" id="botao_cancelar">Cancelar</button>
     </form>
-    <ul>
-        <li>
-            <img src="./images/foto1.jpg" alt="Imagem de um gato"/>
-            <div class="overlay_img_link">
-                <a href="./images/foto1.jpg" title="Ver imagem em tamanho real" target="_blank">Ver imagem em tamanho real</a>
-            </div>
-        </li>
-        <li>
-            <img src="./images/foto2.jpg" alt="Imagem de um Pelicano"/>
-            <div class="overlay_img_link">
-                <a href="./images/foto2.jpg" title="Ver imagem em tamanho real" target="_blank">Ver imagem em tamanho real</a>
-            </div>
-        </li>
-        <li>
-            <img src="./images/foto3.jpg" alt="Imagem de dois cachorros sendo carregados"/>
-            <div class="overlay_img_link">
-                <a href="./images/foto3.jpg" title="Ver imagem em tamanho real" target="_blank">Ver imagem em tamanho real</a>
-            </div>
-        </li>
-        <li>
-            <img src="./images/foto4.jpg" alt="Imagem de uma abelha polinizando uma flor roxa"/>
-            <div class="overlay_img_link">
-                <a href="./images/foto4.jpg" title="Ver imagem em tamanho real" target="_blank">Ver imagem em tamanho real</a>
-            </div>
-        </li>
-        <li>
-            <img src="./images/foto5.jpg" alt="Imagem de uma flor de cor magenta"/>
-            <div class="overlay_img_link">
-                <a href="./images/foto5.jpg" title="Ver imagem em tamanho real" target="_blank">Ver imagem em tamanho real</a>
-            </div>
-        </li>
-    </ul>
+    <div class="container">
+        <ul>
+            
+        </ul>
+    </div>
+    
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="index.js"></script>
 </body>

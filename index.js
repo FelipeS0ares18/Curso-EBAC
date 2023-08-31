@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
     $('header button').click(function(){
         $('form').slideDown();
     })
@@ -11,18 +10,22 @@ $(document).ready(function() {
 
     $('form').on('submit', function(e) {
         e.preventDefault();
-        const URL_img = $('#input_img').val();
-        const URL_nova_img = $('<li style="display: none"</li>');
-        $(`<img src="${URL_img}" />`).appendTo(URL_nova_img)
+        
+        const tarefa = $('#input_tarefa').val();
+        
+        if (tarefa.trim() !== '') {
+            const tarefaNova = $('<li></li>');
+            const checkbox = $('<input type="checkbox">');
+            const label = $('<label></label>').text(tarefa);
 
-        $(`<div class="overlay_img_link"
-            <a href="${URL_img}" target="_blank" title="Ver imagem em tamanho real"> Ver imagem em tamanho real
-            </a>
-        </div>`).appendTo(URL_nova_img)
-        $(URL_nova_img).appendTo('ul')
-        $(URL_nova_img).fadeIn();
+            checkbox.appendTo(tarefaNova);
+            label.appendTo(tarefaNova);
+            
+            tarefaNova.hide();
+            $('ul').append(tarefaNova);
+            tarefaNova.fadeIn();
 
-        $('#input_img').val('')
+            $('#input_tarefa').val('');
+        }
     })
-})
-
+});
