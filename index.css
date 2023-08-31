@@ -25,6 +25,7 @@ header {
 
 
 form {
+    display: none;
     color: #fff;
     background-color: var(--lilas);
     padding: 24px 0;
@@ -65,4 +66,44 @@ button:hover {
     background-color: var(--rosa);
 }
 
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+}
+
+ul li {
+    max-width: 25%;
+    list-style: none;
+    position: relative;
+}
+
+ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay_img_link {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-family: sans-serif;
+    color: #fff;
+    opacity: 0;
+    transition: all ease 1s;
+}
+
+ul li:hover .overlay_img_link {
+    opacity: 1;
+}
+
+.overlay_img_link a{
+    
+    font-family: sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
 
