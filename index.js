@@ -1,42 +1,37 @@
-
-const form = document.getElementById('form_atividade');
-const contato = [];
-const numero = [];
-
+const form = document.getElementById ('form_contato')
+const Contato = [];
+const Numero = [];
 
 let linhas = '';
 
-form.addEventListener('submit', function(e){
-    e.preventDefault();
+form.addEventListener('submit', function(e) {
+    e.preventDefault()
 
-    adcLinha();
-    attTabela();
-});
+    adcLinha()
+    attTabela()
+})
 
-function adcLinha() {
-    const inputNomeContato = document.getElementById('nome_contato');
-    const inputNumeroContato = document.getElementById('numero_contato');
-
-    if (numero.includes(parseFloat(inputNumeroContato.value))) {
-        alert(`O numero: ${inputNumeroContato.value} ja esta cadastrado em outro contato`)
-        inputNumeroContato = '';
-    } else {
-        contato.push(inputNomeContato.value);
-        numero.push(parseFloat(inputNumeroContato.value));
-        
-        let linha = '<tr>';
-        linha += `<td>${inputNomeContato.value}</td>`;
-        linha += `<td>${inputNumeroContato.value}</td>`;
-        linha += '</tr>'
+function adcLinha () {
+    const inputContato = document.getElementById ('nome_contato')
+    const inputNumero = document.getElementById ('numero_contato')
     
-        linhas += linha;
-    }
+    if(Numero.includes(parseInt(inputNumero.value))) {
+        alert(`O numero: ${inputNumero.value} ja está cadastrado em outro contato`)
+    }else {
+        Contato.push(inputContato.value)
+        Numero.push(parseInt(inputNumero.value))
 
-    inputNomeContato.value = '';
-    inputNumeroContato.value = '';
+        let linha = '<tr>'
+        linha += `<td> ${inputContato.value} </td>`
+        linha += `<td> ${inputNumero.value} </td>`
+        linha += '</tr>'
+        
+        linhas += linha;
+
+    }
 }
+
 function attTabela () {
-    const tabela = document.querySelector ('tbody');
+    const tabela = document.querySelector('tbody')
     tabela.innerHTML = linhas
 }
-
